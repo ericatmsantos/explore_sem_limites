@@ -1,0 +1,267 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+
+
+/*Cores HSL*/
+  --color-base-white: #ffffff;
+  --color-base-light-gray: #f9f4fb;
+  --color-base-title: #b52184;
+  --color-base-text: #312d64;
+  --color-base-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-base-light-gray);
+
+}
+
+.astronaut img {
+  width: 100%;
+  height: 37rem;
+}
+
+h1 {
+  color: var(--color-base-title);
+  text-align: center;
+  line-height: 4rem;
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin: 1.7rem 0 0.5rem 0;
+}
+
+.arrow p {
+  text-align: center;
+}
+
+#hero .arrow .button-down:hover {
+  filter: brightness(0.8);
+}
+
+h2 {
+  color: var(--color-base-title);
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+}
+
+p {
+  color: var(--color-base-text);
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  
+  }
+
+  h3 {
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  color: var(--color-base-title);
+  margin-bottom: 2rem;
+  }
+
+.arrow img {
+  width: 5.8rem;
+  height: 10.5rem;
+  display: flex;
+  margin: 3.5rem auto;
+ 
+}
+
+/*Cards*/
+
+#cards {
+  width: 100%;
+  height: 100%;
+  background: var(--color-base-background);
+  padding: 5.3rem 3.9rem 5.5rem;
+  display: grid;
+  gap: 4.9rem;
+ 
+}
+
+#cards .card {
+  background: var(--color-base-white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+  
+}
+
+#cards .card img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+#cards .card-text {
+  width: 26.5rem;
+}
+
+/*Contato*/
+#contato {
+  width: 100%;
+  height: 100%;
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+#contato form h2 {
+  margin-bottom: 4.3rem;
+}
+
+#contato form .input-wrapper {
+  margin-bottom: 2.4rem;
+  
+}
+
+#contato form input,
+#contato form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--color-base-text);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.6rem;
+  color: var(--color-base-text);
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: 'Mulish';
+}
+#contato form textarea {
+  height: 12.6rem;
+}
+
+#contato fieldset {
+  border: 0;
+}
+
+#contato form input::placeholder,
+#contato form textarea::placeholder {
+  color: var(--color-base-text);
+  font-weight: 600;
+  font-size: 1.6rem;
+  
+}
+#contato form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+#contato button {
+  background: var(--color-base-background);
+  color: var(--color-base-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: filter 200ms;
+}
+
+#contato form button:hover {
+  filter: brightness(0.9);
+}
+#name {
+  background: url('./assets/person.svg') no-repeat scroll 1.4rem 1.2rem;
+}
+
+#email {
+  background: url('./assets/email.svg') no-repeat scroll 1.4rem 1.2rem;
+}
+
+/* Footer */
+footer {
+  background: var(--color-base-background);
+  padding: 3.2rem 1.6rem;
+}
+
+footer p {
+  color: var(--color-base-white);
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/*media*/
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 5.8rem;
+    line-height: 7.3rem;
+    margin: 0 0 0.8rem;
+  }
+
+  /* Hero Section */
+  #hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    max-height: 83.6rem;
+  }
+
+  #hero .arrow {
+    order: 1;
+    margin-top: 31.2rem;
+  }
+
+  #hero .astronaut {
+    order: 2;
+  }
+
+  #hero .arrow p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  #hero .arrow .button-down {
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  /* Cards Section */
+  #cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  #cards .card {
+    padding: 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #cards .card img {
+    width: 9.7rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Contact Section */
+  #contato {
+    display: flex;
+    align-items: center;
+    gap: 9.2rem;
+    padding: 0;
+    height: 62.2rem;
+    margin: 0 auto;
+    background: url('./assets/stars.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  #contato form {
+    flex: 1;
+    margin-left: 10.9rem;
+  }
+  #contato .stars {
+    flex: 1;
+  }
+}
